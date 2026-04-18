@@ -1,3 +1,3 @@
-def call (String image, String env) {
-    sh "docker pull ${image}:${env}-v1.0"
+def call (String repo, String env) {
+    sh "docker pull ${repo}:${env}-v1.0"
 }

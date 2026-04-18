@@ -1,7 +1,3 @@
-def call(String image, String env, String port) {
-    sh """
-    docker rm -f ${env} || true
-
-    docker run -d --name ${env} -p ${port}:3000 ${image}:${env}-v1.0
-    """
+def call(String env, String repo, String port) {
+    sh "docker run -d --name ${env} -p ${port}:3000 ${repo}:${env}-v1.0"
 }
